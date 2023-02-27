@@ -20,7 +20,18 @@
 			</form>
 			
 		
-	
+			<?php
+    include "db_conn.php";
+
+    $result = mysqli_query($conn, "SELECT * FROM image_table");
+
+    while($row = mysqli_fetch_array($result)) {
+        $img_path = $row['img_path'];
+        $img_name = $row['img_name'];
+        echo "<img src='$img_path' alt='$img_name'>";
+    }
+?>
+
 	</div>
 	</body>
 	</html>

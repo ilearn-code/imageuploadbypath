@@ -12,7 +12,7 @@
 
 		
 		$file_path = "photo/".$file_name;	
-		mysqli_query($conn,"INSERT INTO image_table(img_name,img_path)VALUES('$image_name','$file_path')") or die ("image not inserted". mysqli_error());
+		mysqli_query($conn,"INSERT INTO image_table(img_name,img_path)VALUES('$image_name','$file_path')");
 		move_uploaded_file($file_tmp,$file_path);
 	
 ?>
